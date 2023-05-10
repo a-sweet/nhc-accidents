@@ -12,7 +12,7 @@ st.markdown('---')
 #Prevents loading the file every time the user interacts with widgets
 @st.cache_data
 def load_data():
-    df = pd.read_csv('/Users/asweet/Desktop/NHC Crash Data/nhc_crashes.csv', parse_dates=['full_date'])
+    df = pd.read_csv('https://github.com/a-sweet/nhc-accidents/raw/main/nhc_crashes.csv', parse_dates=['full_date'])
     indexed_df = df.set_index('full_date')
     return indexed_df
 
